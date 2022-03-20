@@ -1,8 +1,8 @@
 // Buscar elemento pai
 var elemento_pai = document.body;
-var div = document.createElement("div");
-var n = elemento_pai.appendChild(div);
-n.classList.add("content")
+var divmain = document.createElement("div");
+var divpai = elemento_pai.appendChild(divmain);
+divpai.classList.add("content");
 
 // Criar elemento
 var tabela = document.createElement("table");
@@ -15,21 +15,35 @@ var tabela = document.createElement("table");
 // Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
 // elemento_pai.appendChild(titulo);
 
-var filho = n.appendChild(tabela);
-
+var divfilho = divpai.appendChild(tabela);
 var tam = 41;
 
 for (let i = 0; i < tam; i++) {
-  var titulo2 = document.createElement("tr");
-  var neto = filho.appendChild(titulo2);
+  var sdivfilho = document.createElement("tr");
+  var divneto = divfilho.appendChild(sdivfilho);
   for (let j = 0; j < tam; j++) {
-    var titulo3 = document.createElement("td");
-    var z = neto.appendChild(titulo3);
-    z.classList.add(i,j)
-    z.addEventListener("click",muda(z))
+    var sdivneto = document.createElement("td");
+    var sdivneto2 = divneto.appendChild(sdivneto);
   }
 }
 
-function muda(z){
-  console.log(z);
+
+function adicionaevento() {
+  let quadrados = document.getElementsByTagName('td')
+  for (let i = 0; i<quadrados.length; i++){
+    quadrados[i].addEventListener('mouseover',()=> quadrados[i].classList.add("corfixa"))
+    console.log(quadrados);
+  }
+  
 }
+adicionaevento()
+
+function teste(){
+let posicao = document.getElementsByTagName('div')
+// for (let i = 0; i<posicao.length; i++){
+  x = posicao[0].style
+console.log(posicao.style);
+// }
+}
+
+// window.setInterval(teste,1000)
