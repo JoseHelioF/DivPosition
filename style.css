@@ -32,6 +32,12 @@ table{
     margin: 0;
 }
 
+tr{
+    display: flex;
+    align-items: center;
+    
+}
+
 td{
     width: 10px;
     height: 10px;
@@ -47,5 +53,18 @@ td:hover{
     background-color: blue;
     border-radius: 50%;
     border: black 1px solid;
-    /* position:absolute; */    
+    animation: anima 1s;
+    /* float: right;     */
+}
+@keyframes anima{
+    from{
+       
+        border: black 1px solid;
+    }
+    to{
+       position: absolute ;
+       top:0;
+       left:0;
+    }
+
 }

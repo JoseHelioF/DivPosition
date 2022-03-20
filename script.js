@@ -1,6 +1,6 @@
 // Buscar elemento pai
 var elemento_pai = document.body;
-var divmain = document.createElement("div");
+var divmain = document.createElement("main");
 var divpai = elemento_pai.appendChild(divmain);
 divpai.classList.add("content");
 
@@ -16,7 +16,7 @@ var tabela = document.createElement("table");
 // elemento_pai.appendChild(titulo);
 
 var divfilho = divpai.appendChild(tabela);
-var tam = 41;
+var tam = 49;
 
 for (let i = 0; i < tam; i++) {
   var sdivfilho = document.createElement("tr");
@@ -31,8 +31,8 @@ for (let i = 0; i < tam; i++) {
 function adicionaevento() {
   let quadrados = document.getElementsByTagName('td')
   for (let i = 0; i<quadrados.length; i++){
-    quadrados[i].addEventListener('mouseover',()=> quadrados[i].classList.add("corfixa"))
-    console.log(quadrados);
+    quadrados[i].addEventListener('mouseover',()=> quadrados[i].classList.toggle("corfixa"))
+    // console.log(quadrados);
   }
   
 }
