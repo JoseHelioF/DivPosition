@@ -41,7 +41,7 @@ tr{
 td{
     width: 10px;
     height: 10px;
-    border: #dddddd 1px solid;
+    /* border: #dddddd 1px solid; */
 }
 td:hover{
     border: black 1px solid;
@@ -56,15 +56,5 @@ td:hover{
     animation: anima 1s;
     /* float: right;     */
 }
-@keyframes anima{
-    from{
-       
-        border: black 1px solid;
-    }
-    to{
-       position: absolute ;
-       top:0;
-       left:0;
-    }
 
-}
+

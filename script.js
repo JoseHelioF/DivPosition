@@ -38,12 +38,10 @@ function adicionaevento() {
 }
 adicionaevento()
 
-function teste(){
-let posicao = document.getElementsByTagName('div')
-// for (let i = 0; i<posicao.length; i++){
-  x = posicao[0].style
-console.log(posicao.style);
-// }
-}
 
-// window.setInterval(teste,1000)
+
+window.addEventListener('load',()=>document.getElementsByTagName('td')[0].classList.add("corfixa"))
+// window.setInterval(()=>console.log(document.getElementsByClassName('corfixa')[0]),1000)
+ 
+
+
